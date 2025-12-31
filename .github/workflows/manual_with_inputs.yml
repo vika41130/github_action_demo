@@ -8,9 +8,13 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Name of'
+        description: 'Your name'
         type: string
         default: 'Your name here'
+      age:
+        description: 'Your age'
+        type: number
+        required: true
 jobs:
   echo_inputs:
     runs-on: ubuntu-latest
