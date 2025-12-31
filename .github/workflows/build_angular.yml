@@ -21,3 +21,8 @@ jobs:
        run: npm install
      - name: Build Angular App
        run: npm run build
+     - name: Upload angular bundle
+       uses: actions/upload-artifact@v6.0.0
+       with:
+        name: angular_bundle
+        path: dist/test_build
