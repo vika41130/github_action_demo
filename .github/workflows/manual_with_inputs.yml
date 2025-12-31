@@ -12,7 +12,7 @@ on:
         type: string
         default: 'Your name here'
 jobs:
-  echo_branch_name:
+  echo_inputs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
