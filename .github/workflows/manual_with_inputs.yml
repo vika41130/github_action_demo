@@ -20,5 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Echo branch name
+      - name: Echo name
         run: echo 'your name' ${{inputs.name}}
+      - name: Echo age
+        run: echo 'your age' ${{inputs.age}}
