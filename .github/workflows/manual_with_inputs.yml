@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      name:
+        description: 'Name of'
+        type: string
+        default: 'Your name here'
 jobs:
   echo_branch_name:
     runs-on: ubuntu-latest
