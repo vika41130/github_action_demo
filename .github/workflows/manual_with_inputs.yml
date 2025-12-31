@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 jobs:
-  hello:
+  echo_branch_name:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
