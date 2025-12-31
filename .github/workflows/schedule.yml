@@ -1,0 +1,12 @@
+name: manual_with_inputs
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'
+jobs:
+  get_current_time:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Current time
+        run: echo 'Current time:'${{env.NOW}}
