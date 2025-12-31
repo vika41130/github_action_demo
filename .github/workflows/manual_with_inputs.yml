@@ -17,4 +17,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Echo branch name
-        run: echo ${{github.ref_name}}
+        run: echo 'your name' ${{inputs.name}}
