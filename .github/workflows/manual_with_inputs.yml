@@ -15,6 +15,13 @@ on:
         description: 'Your age'
         type: number
         required: true
+      gender:
+        description: 'Your gender'
+        type: choice
+        options:
+          - Male
+          - Female
+        required: true
 jobs:
   echo_inputs:
     runs-on: ubuntu-latest
@@ -24,3 +31,5 @@ jobs:
         run: echo 'your name' ${{inputs.name}}
       - name: Echo age
         run: echo 'your age' ${{inputs.age}}
+      - name: Echo gender
+        run: echo 'your gender' ${{inputs.gender}}
