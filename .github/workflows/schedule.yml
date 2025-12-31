@@ -3,11 +3,11 @@ name: schedule
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/10 * * * *'
 jobs:
   get_current_time:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Current time
-        run: echo 'Current time:'${{env.NOW}}
+        run: echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')"
