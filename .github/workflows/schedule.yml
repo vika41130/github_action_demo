@@ -1,4 +1,4 @@
-name: manual_with_inputs
+name: schedule
 
 on:
   schedule:
