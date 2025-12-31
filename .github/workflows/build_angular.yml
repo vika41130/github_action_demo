@@ -25,4 +25,6 @@ jobs:
        uses: actions/upload-artifact@v6.0.0
        with:
         name: angular_bundle
-        path: dist/test_build
+        path: dist/test_build_not_existing
+        if-no-files-found: 'warn'
+        
