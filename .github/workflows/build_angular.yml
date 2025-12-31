@@ -23,6 +23,7 @@ jobs:
        uses: actions/upload-artifact@v6.0.0
        with:
         name: angular_bundle
-        path: dist/test_build_not_existing
+        path: dist/test_build
         if-no-files-found: 'warn'
+        retention-days: 1
         
