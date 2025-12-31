@@ -22,6 +22,10 @@ on:
           - Male
           - Female
         required: true
+      married:
+        description: 'Are you married ?'
+        type: boolean
+        required: true
 jobs:
   echo_inputs:
     runs-on: ubuntu-latest
@@ -33,3 +37,5 @@ jobs:
         run: echo 'your age' ${{inputs.age}}
       - name: Echo gender
         run: echo 'your gender' ${{inputs.gender}}
+      - name: Ech married
+        run: echo 'are you married' ${{inputs.married}}
