@@ -26,4 +26,9 @@ jobs:
         path: dist/test_build
         if-no-files-found: 'warn'
         retention-days: 1
+  deploy_app:
+    runs-on: ubuntu-latest
+    steps:
+     - name: Build
+       run: echo 'Build'
         
