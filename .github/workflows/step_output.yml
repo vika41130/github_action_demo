@@ -1,0 +1,16 @@
+name: Step Output
+on:
+ push:
+   branches: [test_build_angular]
+jobs:
+ job1:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Set output
+     id: set_output
+     shell: bash
+     run: echo "name=Edgar" >> $GITHUB_OUTPUT
+   - name: Access output
+     shell: bash
+     run: echo ${{steps.set_output.output.name}}
+    
