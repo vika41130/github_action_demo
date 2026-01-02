@@ -14,8 +14,8 @@ jobs:
       echo "age=20" >> $GITHUB_OUTPUT
    - name: Set output 2
      id: set_output_2
-     shell: bash
-     run: echo "salary=5000" >> $GITHUB_OUTPUT
+     shell: pwsh
+     run: echo "salary=5000" >> $env:GITHUB_OUTPUT
    - name: Access output
      shell: bash
      run: |
