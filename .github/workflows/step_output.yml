@@ -9,8 +9,12 @@ jobs:
    - name: Set output
      id: set_output
      shell: bash
-     run: echo "name=Edgar" >> $GITHUB_OUTPUT
+     run: |
+      echo "name=Edgar" >> $GITHUB_OUTPUT
+      echo "age=20" >> $GITHUB_OUTPUT
    - name: Access output
      shell: bash
-     run: echo ${{steps.set_output.outputs.name}}
+     run: |
+      echo ${{steps.set_output.outputs.name}}
+      echo ${{steps.set_output.outputs.age}}
     
