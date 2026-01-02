@@ -12,5 +12,5 @@ jobs:
      run: echo "name=Edgar" >> $GITHUB_OUTPUT
    - name: Access output
      shell: bash
-     run: echo ${{steps.set_output.output.name}}
+     run: echo ${{steps.set_output.outputs.name}}
     
