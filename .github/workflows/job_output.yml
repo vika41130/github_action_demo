@@ -1,0 +1,19 @@
+name: Job Output
+on:
+ push:
+   branches: [test_build_angular]
+jobs:
+ job1:
+  runs-on: ubuntu-latest
+  outputs:
+    job1_name: ${{steps.set_job_output.outputs.job1}}
+  steps:
+  - name: Set job output
+    id: set_job_output
+    run: echo "job1=Job1_Name" >> $GITHUB_OUTPUT
+ job2:
+  runs-on: ubuntu-latest
+  needs: [job1]
+  steps:
+  - name: Access job1 output
+    run: echo "Job1 name"${{needs.job1.outputs.job1_name}}
