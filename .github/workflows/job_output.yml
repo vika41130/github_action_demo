@@ -16,4 +16,4 @@ jobs:
   needs: [job1]
   steps:
   - name: Access job1 output
-    run: echo "Job1 name"${{needs.job1.outputs.job1_name}}
+    run: echo "Job1 name: "${{needs.job1.outputs.job1_name}}
